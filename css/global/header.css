@@ -8,11 +8,9 @@
   justify-content: space-between;
   align-items: center;
   /* Faz com que o valor de padding não some, pode colocar valor cheio que já vai contar o valor do padding junto */
-  box-sizing: border-box;
-  padding: 20px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+ 
 }
 .header-menu{
   display: flex;
