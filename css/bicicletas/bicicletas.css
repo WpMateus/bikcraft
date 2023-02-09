@@ -1,5 +1,7 @@
 .bicicletas-bg {
-  background: var(--cor-11);
+  background-image: linear-gradient(to right, var(--cor-0) 30%, var(--cor-11) 30%);
+  /* box-shadow: inset 120px 0px white; Estilo fixo, não é ideal para esse problema*/
+
 }
 .bicicletas {
   display: grid;
@@ -27,6 +29,7 @@
 .bicicletas-conteudo{
   display: grid;
   grid-template-columns: 1fr auto;
+  align-content: start;
 }
 .bicicletas h2,
 .bicicletas p{
@@ -48,4 +51,46 @@
 }
 .bicicletas a{
   place-self: end;
+}
+.bicicletas li{
+  display: flex;
+  align-items: center;
+}
+.bicicletas ul{
+  display: grid;
+  gap:16px
+}
+
+/* Alternativa de estilo que imita o bicicletas ul acima
+.bicicletas li+li{
+  margin-top: 16px;
+} */
+.bicicletas-conteudo img{
+  width: 24px;
+  margin-right: 8px;
+}
+
+@media(max-width: 800px){
+  .bicicletas{
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .bicicletas-bg{
+    background: var(--cor-11);
+  }
+}
+@media(max-width: 600px){
+  .bicicletas-conteudo{
+    grid-template-columns: 1fr;
+  }
+  .bicicletas ul{
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 32px;
+    font-size: 1rem;
+  }
+  .bicicletas a{
+    place-self: start;
+  }
 }
